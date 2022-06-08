@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './style.css';
+import CardContainer from './components/CardContainer.jsx';
+import myContext from './myContext.js';
+import { useState } from 'react';
 
 function App() {
+  const [hasRated, setHasRated] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [selected, setSelected] = useState('');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <myContext.Provider
+      value={{
+        hasRated: hasRated,
+        setHasRated: setHasRated,
+        hasSubmitted: hasSubmitted,
+        setHasSubmitted: setHasSubmitted,
+        selected: selected, setSelected: setSelected
+      }}>
+      <CardContainer />
+    </myContext.Provider>
   );
 }
 

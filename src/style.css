@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+
+#root {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+body, h1, h2, h3, h4, h5, h6, button{
+    margin: 0px;
+    font-family: 'Overpass';
+}
+
+.card-container {
+    width: 24%;
+    margin: auto;
+    padding: 40px;
+    border-radius: 25px;
+    display: grid;
+    gap: 25px;
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(0, 0%, 100%);
+}
+
+.star {
+    background-color: hsl(213, 19%, 18%);
+    width: 16px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-support {
+    font-size: 15px;
+    color: hsl(217, 12%, 63%);
+}
+
+.rating-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    color: hsl(217, 12%, 63%);
+}
+
+.rating {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(217, 12%, 63%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.selected.rating {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+
+.rating:hover {
+    background-color: hsl(216, 12%, 54%);
+    color: hsl(0, 0%, 100%);
+}
+
+.submit-button {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.submit-button:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+}
+
+.card-container.center {
+    display: grid;
+    justify-items: center;
+}
+
+.rating-result {
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(25, 97%, 53%);
+    text-align: center;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.final-word {
+    color: hsl(216, 12%, 54%);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        width: unset;
+    }
+}
